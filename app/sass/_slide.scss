@@ -1,0 +1,108 @@
+.slide__ach {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $main_regular;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.bunner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.bunner__item {
+    max-width: 255px;
+    height: 90px;
+    background-color: $white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.bunner__item__img {
+    height: 200px;
+    min-width: 315px;
+}
+
+.bunner__item img {
+    margin: 25px 100px;
+}
+
+.bunner__item-hide {
+    display: none;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $grey_separator;
+}
+
+.slider__button {
+    width: 16px;
+    height: 16px;
+    background: $active_regular;
+    opacity: 0.2;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.slider__button:not(:last-child) {
+    margin-right: 14px;
+}
+
+.slider__button:focus {
+    background: $active_regular;
+    opacity: 1;
+}
+
+.slider__button:hover {
+    background: $active_regular;
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .slide {
+        flex-direction: column;
+    }
+
+    .bunner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bunner__item {
+        min-width: 196px;
+        height: 90px;
+        background-color: $white;
+    }
+
+    .bunner__item__img img {
+        max-width: 130px;
+    }
+
+    .bunner__item img {
+        margin: 25px 0;
+    }
+
+    .bunner__item-hide {
+        display: block;
+    }
+}

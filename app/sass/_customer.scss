@@ -1,0 +1,136 @@
+.customer {
+    margin-top: 90px;
+    padding: 0 15px;
+}
+
+.customer__list {
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 4px solid $customer;
+    max-width: 315px;
+    padding-bottom: 30px;
+    overflow: auto;
+}
+.customer__list::-webkit-scrollbar { width: 0; }
+
+.customer__list p {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    color: $grey_text;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.customer__list__gradient{
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.customer__list p:active{
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.customer__list p:not(.customer__list__gradient):hover {
+    background: linear-gradient($gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.customer__list p:focus{
+    background: linear-gradient($gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.customer__list p:not(:first-child) {
+    margin-left: 30px;
+}
+
+.customer__info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-width: 315px;
+}
+
+.customer__info h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    color: $white;
+    padding-bottom: 30px;
+}
+
+.customer__info p {
+    font-size: 19px;
+    line-height: 30px;
+    color: $white;
+}
+
+@media (min-width: 768px) {
+    .customer {
+        margin-top: 60px;
+    }
+
+    .customer__list {
+        max-width: 648px;
+    }
+
+    .customer__list p {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    .customer__info {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .customer {
+        display: flex;
+    }
+
+    .customer__list p {
+        white-space: wrap;    
+    }
+
+    .customer__list {
+       width: 495px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-bottom: none;
+        border-right: 4px solid $customer;
+    }
+
+    .customer__list p:not(:first-child) {
+        margin-left: 0;
+        text-align: end;
+        padding-right: 60px;
+        margin-top: 30px;
+    }
+
+    .customer__list__gradient {
+        text-align: end;
+        padding-right: 60px;
+    }
+
+    .customer__info {
+        max-width: 50%;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 60px;
+    }
+}

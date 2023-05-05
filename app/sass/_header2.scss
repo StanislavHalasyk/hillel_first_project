@@ -1,0 +1,228 @@
+.header2 {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content min-content;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+}
+
+.header__data {
+    margin: 0 -30px;
+    padding: 15px 45px 15px;
+    background: $header2;
+}
+
+.lang_about a {
+    $white: #ffffff;
+}
+
+.lang_about a:active {
+    background: $accent;
+    outline: none;
+}
+
+.lang_about a:not(.active):hover {
+    $header2: rgba(255, 255, 255, 0.2);
+}
+
+.lang_about a:focus {
+    background-color: $accent;
+    outline: none;
+}
+
+.header__adress_about {
+    color: $white;
+}
+
+.header__phone_about {
+    color: $white;
+}
+
+.header__fb_about:hover path {
+    fill: $accent;
+}
+
+.header__breadcrumbs_about {
+    color: $white;
+}
+
+.header__logo-box_about {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.menu__btn_focus {
+    background-image: url(../img/Hamburger2.svg);
+}
+
+.menu__btn_focus:active {
+    background-color: $main_soft;
+}
+
+.legal {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    color: $white;
+    padding: 103px 15px 159px;
+    max-width: 600px;
+}
+
+.circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    left: calc(50% - 42px/2);
+    bottom: 0px;
+    opacity: 0.5;
+    border: 2px solid $white;
+    position: relative;
+    text-align: center;
+    top: 410px;
+}
+
+.circle:hover {
+    border: 2px solid $accent;
+}
+
+.circle__picture:hover svg{
+    stroke: $accent;
+}
+
+.circle__picture {
+    position: absolute;
+    width: 22px;
+    height: 11px;
+    left: 9px;
+    top: 12px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 60px;
+    }
+
+    .gradient {
+        background-size: 893px 1024px, 100% auto;
+    }
+
+    .header2 {
+        grid-template-rows: repeat(3, min-content);
+        grid-template-columns: 1fr;
+        padding-left: 0;
+        padding-right: 0;
+    } 
+
+    .header__data_about {
+        padding: 10px 40px;
+        background: rgba(245, 245, 250, 0);
+    }
+
+    .header__logo-box_about {
+        padding-top: 3px;
+        padding-bottom: 30px;
+        padding-left: 0;
+        padding-right: 60px;
+    }
+
+    .menu {
+        padding-left: 0;
+    }
+
+    .menu__list_about a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+        color: $white;
+    }
+
+    .menu__list_about a:hover {
+        border-bottom: 2px solid $white;
+        padding-bottom: 3px;
+    }
+
+    .menu__list_about a:active {
+        border-bottom: none;
+        padding-bottom: 3px;
+    }
+
+    .menu__list_about a:focus {
+        border-bottom: 2px solid $accent;
+        color: $accent;
+        padding-bottom: 3px;
+        outline: none;
+    }
+
+    .legal {
+        padding: 325px 15px 417px;
+        max-width: none;
+    }
+
+    .circle {
+        top: 780px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header2 {
+        grid-template-rows: repeat(2, min-content);
+        grid-template-columns: min-content 1fr;
+        padding-top: 35px;
+    }
+
+    .gradient {
+        background-size: 670px 768px, 100% auto;
+    }
+
+    .header__data_about {
+        padding-top: 0;
+        padding-bottom: 15px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header__logo-box_about {
+        grid-row: 1 / -1;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .header__phone_about {
+        padding-left: 0;;
+    }
+
+    .header__adress_about::after {
+        margin-left: 2px;
+        margin-right: 1px;
+    }
+
+    .header__adress_about::after {
+        content: '';
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+
+    .menu {
+        justify-self: end;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header__breadcrumbs {
+        width: 150px;
+    }
+
+    .legal {
+        padding: 168px 97px 410px;
+    }
+
+    .circle {
+        top: 555px;
+        left: 485px;
+    }
+}

@@ -1,0 +1,149 @@
+.place {
+    padding-top: 32px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.place__adress {
+    font-size: 16px;
+    line-height: 20px;
+    color: $main_regular;
+}
+
+.place__map {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $active_regular;
+    text-decoration: none;
+}
+
+.contacts {
+    margin-top: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts a {
+    text-decoration: none;
+}
+
+.contacts__fb {
+    width: 38px;
+    height: 38px;
+}
+
+.contacts__fb:hover path {
+    fill: $accent;
+}
+
+.contacts__phone {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    color: #46466E;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contacts__mail:hover {
+    color: $accent
+}
+
+.contacts__mail {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $active_regular;
+}
+
+.copyrite {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #B3B3BA;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .first {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .place__adress::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: $grey_text;
+        border-radius: 50%;
+        display: inline-flex;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .place {
+        min-width: 50%;
+        display: flex;
+        padding-bottom: 21px;
+    }
+
+    .place__map {
+        align-self: center;
+    }
+
+    .contacts {
+        min-width: 50%;
+        order: 3;
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .contacts__phone::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: $grey_text;
+        border-radius: 50%;
+        display: inline-flex;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .contacts__phone::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: $grey_text;
+        border-radius: 50%;
+        display: inline-flex;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .copyrite {
+        min-width: 50%;
+        text-align: right;
+    }
+}
+
+@media (min-width: 1024px) {
+    .quality {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .quality__about {
+        max-width: 400px;
+    }
+
+    .quality__main {
+        max-width: 362px;
+    }
+}
